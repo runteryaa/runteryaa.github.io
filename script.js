@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
   fetch("http://runterya.ga/names.json")
     .then(response => response.json())
     .then(data => {
@@ -24,4 +23,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       document.getElementById("gallery").insertAdjacentHTML("beforeend", Html);
     });
-});
