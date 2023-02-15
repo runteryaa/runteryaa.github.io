@@ -7,13 +7,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
       let Html = "";
 
       for (const Name of Names) {
-        const name = data[Name];
-		const image = data[Name].img;
-		const link = data[Name].link;
+        const name = data[Name].name;
+		    const image = data[Name].img;
+		    const link = data[Name].link;
 
 
         Html += `
-          <div onclick="window.location.href='${link}'">
+          <div class="item btn" onclick="window.location.href='${link}'" ondragstart="return false;">
+            <a href="https://runterya.ga/${link}">
+              <img src="${image}" alt="${name}">
+              <h3>${name}</h3>
+            </a>
           </div>
         `;
       }

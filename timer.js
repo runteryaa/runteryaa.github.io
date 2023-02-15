@@ -6,16 +6,16 @@ const ALERT_THRESHOLD = 1;
 
 const COLOR_CODES = {
   info: {
-    color: "green",
+    color: "green"
   },
   warning: {
     color: "orange",
-    threshold: WARNING_THRESHOLD,
+    threshold: WARNING_THRESHOLD
   },
   alert: {
     color: "red",
-    threshold: ALERT_THRESHOLD,
-  },
+    threshold: ALERT_THRESHOLD
+  }
 };
 
 const TIME_LIMIT = 5;
@@ -57,8 +57,9 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML =
-      formatTime(timeLeft);
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
@@ -112,20 +113,24 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-var word = document.getElementById("base-timer-label");
-var button = document.getElementById("btn-main");
+var word = document.getElementById('base-timer-label');
+var button = document.getElementById('btn-main');
 
 function doSetTimeout(ğ) {
-  setTimeout(function changeWord() {
-    button.removeAttribute("disabled");
-    button.setAttribute(
-      "style",
-      "background-color: #2fed83; cursor: pointer; 	border-radius: 15px;"
-    );
+  setTimeout(function changeWord(){
+    button.removeAttribute('disabled');
+    button.setAttribute("style", "background-color: #2fed83; cursor: pointer; 	border-radius: 15px;");
     word.innerHTML = "⇩";
-    word.setAttribute("style", "font-size: 100px");
-    document.body.style.cursor = "default";
-  }, 5000 * ğ);
+    word.setAttribute("style", "font-size: 100px")
+    document.body.style.cursor = 'default';
+    
+}, 5000*ğ);
 }
 
-for (var ğ = 1; ğ <= 5; ++ğ) doSetTimeout(ğ);
+for (var ğ = 1; ğ <= 5; ++ğ)
+  doSetTimeout(ğ);
+
+
+function setUrl() {
+  window.open("https://us.acedirect.net/rp-direct-link?link-type=2&pubid=849921", "_blank");
+}

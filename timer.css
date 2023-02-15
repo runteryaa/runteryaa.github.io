@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  place-items: center;
+overflow: hidden;
+  background-color: #ebebeb;
+  margin: 0;
+  cursor: progress;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: #fc3030;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+
+
+
+.title {
+  font-family: "Montserrat";
+  font-size: 50px;
+  text-align: center;
+}
+
+.note {
+  color: #2800FF;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------------------------BUTTON */
+
+button,
+button:hover {
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+.btn-main {
+	background: #ed6868;
+	color: #fff;
+	border-radius: 30px;
+	border: none;
+	height: 50px;
+  width: 150px;
+	padding: 0 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	font-size: 14px;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	margin: 5px auto;
+	display: table;
+  cursor: not-allowed;
+}
+
+.btn-main:hover {
+	background: #b6cfc1;
+	color: #fff;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+.btn-main:active {
+  transform: translateY(3px);
+}
