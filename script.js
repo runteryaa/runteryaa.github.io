@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  fetch("/names.json")
+  fetch("http://runterya.ga/names.json")
     .then(response => response.json())
     .then(data => {
 		
